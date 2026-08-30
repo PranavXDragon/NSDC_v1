@@ -110,7 +110,7 @@ export default function TeamsHero() {
                 alt="NSDC Logo"
                 width={100}
                 height={33}
-                className="h-8 w-auto" style={{ width: "auto", height: "auto" }}
+                className="h-8 w-auto"
               />
               <div className="h-px w-8 bg-white/60" />
               <span className="font-mono text-xs tracking-[0.2em] text-white/60">
