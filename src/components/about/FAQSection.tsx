@@ -1,0 +1,173 @@
+"use client";
+
+import { motion, AnimatePresence, useInView } from "framer-motion";
+import { useState, useRef } from "react";
+import { Plus, Minus } from "lucide-react";
+
+const faqs = [
+  {
+    question: "Do I need technical experience to join NSDC SCET?",
+    answer:
+      "No. NSDC SCET welcomes students from all backgrounds and skill levels. Whether you're just starting out or already have technical experience, you can learn, contribute, and grow with the community.",
+  },
+  {
+    question: "What's the time commitment?",
+    answer:
+      "NSDC SCET is flexible. Members can participate in workshops, events, projects, competitions, and other activities based on their availability and interests.",
+  },
+  {
+    question: "How do I join a project team?",
+    answer:
+      "Project teams are formed around ideas, events, and initiatives. Participate in chapter activities, connect with other members, and watch for project announcements to find opportunities to collaborate.",
+  },
+  {
+    question: "Are there membership fees?",
+    answer:
+      "No. Membership in the NSDC SCET chapter is free. Some external events, competitions, certifications, or special programs may have separate fees.",
+  },
+  {
+    question: "Can non-CS/Data Science students join?",
+    answer:
+      "Absolutely. NSDC SCET encourages students from all branches and backgrounds to participate. Different perspectives and skills make our projects and community stronger.",
+  },
+  {
+    question: "What kind of events do you organize?",
+    answer:
+      "We organize technical workshops, AI and Data Science sessions, hackathons, coding competitions, project showcases, guest sessions, networking activities, and collaborative events.",
+  },
+  {
+    question: "How can I become a core team member?",
+    answer:
+      "Core team opportunities are based on active participation, contribution, initiative, and commitment to the chapter. Get involved in events and projects, take responsibility, and contribute consistently.",
+  },
+];
+
+export default function FAQSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const sectionRef = useRef<HTMLElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const isHeaderInView = useInView(headerRef, { once: true, amount: 0.3 });
+
+  return (
+    <section
+      ref={sectionRef}
+      className="relative w-full bg-[var(--background)] overflow-hidden py-24 md:py-40"
+    >
+      {/* Background Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-nsdc-blue/3 rounded-full blur-[200px]" />
+      </div>
+
+      <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20">
+        {/* Section Label */}
+        <motion.div
+          ref={headerRef}
+          initial={{ opacity: 0 }}
+          animate={isHeaderInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.6 }}
+          className="flex items-center gap-6 mb-8"
+        >
+          <div className="w-16 md:w-24 h-px bg-linear-to-r from-nsdc-blue/60 to-transparent" />
+          <span
+            className="text-[10px] md:text-[11px] font-light tracking-[0.5em] text-white/30 uppercase"
+            style={{ fontFamily: "var(--font-body)" }}
+          >
+            Common Questions
+          </span>
+        </motion.div>
+
+        {/* Grid Layout */}
+        <div className="grid lg:grid-cols-5 gap-12 lg:gap-20">
+          {/* Left - Title */}
+          <div className="lg:col-span-2">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl md:text-6xl lg:text-7xl font-black text-[var(--foreground)] tracking-normal leading-[0.95] mb-6 sticky top-32"
+              style={{ fontFamily: "var(--font-heading)" }}
+            >
+              FREQUENTLY
+              <br />
+              <span className="text-nsdc-blue">ASKED</span>
+            </motion.h2>
+          </div>
+
+          {/* Right - FAQ Items */}
+          <div className="lg:col-span-3">
+            <div className="space-y-3">
+              {faqs.map((faq, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                  className="group"
+                >
+                  <div
+                    className={`relative bg-[var(--surface)] border transition-all duration-300 ${openIndex === index
+                      ? 'border-nsdc-blue/30'
+                      : 'border-white/5 hover:border-white/10'
+                      }`}
+                  >
+                    {/* Question Button */}
+                    <button
+                      onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                      className="w-full flex items-center justify-between p-5 md:p-6 text-left"
+                    >
+                      <span
+                        className={`pr-8 text-sm md:text-base font-medium transition-colors duration-300 ${openIndex === index ? 'text-white' : 'text-white/70'
+                          }`}
+                        style={{ fontFamily: "var(--font-body)" }}
+                      >
+                        {faq.question}
+                      </span>
+                      <div
+                        className={`shrink-0 w-8 h-8 flex items-center justify-center border transition-all duration-300 ${openIndex === index
+                          ? 'border-nsdc-blue bg-nsdc-blue/10'
+                          : 'border-white/10 bg-transparent'
+                          }`}
+                      >
+                        {openIndex === index ? (
+                          <Minus className="w-4 h-4 text-nsdc-blue" />
+                        ) : (
+                          <Plus className="w-4 h-4 text-white/40" />
+                        )}
+                      </div>
+                    </button>
+
+                    {/* Answer */}
+                    <AnimatePresence initial={false}>
+                      {openIndex === index && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                          className="overflow-hidden"
+                        >
+                          <div className="px-5 md:px-6 pb-5 md:pb-6 pt-0">
+                            <div className="pt-4 border-t border-white/5">
+                              <p
+                                className="text-sm text-white/40 leading-[1.8]"
+                                style={{ fontFamily: "var(--font-body)" }}
+                              >
+                                {faq.answer}
+                              </p>
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
