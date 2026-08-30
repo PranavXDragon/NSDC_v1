@@ -30,7 +30,7 @@ export default function EventsHero() {
           className="absolute inset-0 w-full h-[120%] -top-[10%]"
         >
           <Image
-            src="/events/hero.webp"
+            src="/events/hero.avif"
             alt="NSDC Events"
             fill
             priority
@@ -110,7 +110,7 @@ export default function EventsHero() {
                 alt="NSDC Logo"
                 width={100}
                 height={33}
-                className="h-8 w-auto"
+                className="h-8 w-auto" style={{ width: "auto", height: "auto" }}
               />
               <div className="h-px w-8 bg-white/60" />
               <span className="font-mono text-xs tracking-[0.2em] text-white/60">

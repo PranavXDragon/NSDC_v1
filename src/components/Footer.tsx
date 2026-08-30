@@ -115,7 +115,7 @@ export default function Footer() {
                   alt="NSDC Logo"
                   width={48}
                   height={48}
-                  className="h-12 w-auto"
+                  className="h-12 w-auto" style={{ width: "auto", height: "auto" }}
                 />
                 <div>
                   <span className="block text-lg font-black tracking-normal" style={{ fontFamily: "var(--font-heading)" }}>

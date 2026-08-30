@@ -5,7 +5,7 @@ export const dynamic = 'force-static';
 
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://usar.nsdc.org';
+    const baseUrl = 'http://localhost:3000';
 
     // Static routes
     const routes = [

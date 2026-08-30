@@ -55,7 +55,7 @@ export default function Hero() {
               alt="NSDC"
               width={100}
               height={36}
-              className="h-9 w-auto"
+              className="h-9 w-auto" style={{ width: "auto", height: "auto" }}
               priority
             />
             <div className="hidden md:flex items-center gap-8">

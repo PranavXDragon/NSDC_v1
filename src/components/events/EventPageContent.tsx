@@ -182,6 +182,7 @@ export default function EventPageContent({ event }: EventPageContentProps) {
                                 src={img}
                                 alt={`${event.title} - Image ${idx + 1}`}
                                 fill
+                                sizes="(max-width: 1024px) 100vw, 50vw"
                                 className="object-contain bg-black/50"
                                 priority={idx === 0}
                               />
@@ -193,6 +194,7 @@ export default function EventPageContent({ event }: EventPageContentProps) {
                           src={event.image!}
                           alt={event.title}
                           fill
+                          sizes="(max-width: 1024px) 100vw, 50vw"
                           className="object-contain bg-black/50"
                           priority
                         />
@@ -218,6 +220,7 @@ export default function EventPageContent({ event }: EventPageContentProps) {
                               src={img}
                               alt={`Thumbnail ${idx + 1}`}
                               fill
+                              sizes="100px"
                               className="object-cover"
                             />
                             <div className={`absolute inset-0 flex items-center justify-center ${activeSlide === idx ? "bg-nsdc-blue/40" : "bg-black/50"
@@ -723,6 +726,7 @@ export default function EventPageContent({ event }: EventPageContentProps) {
                       src={image}
                       alt={`${event.title} gallery image ${i + 1}`}
                       fill
+                      sizes="(max-width: 768px) 50vw, 33vw"
                       className="object-cover transition-transform duration-300 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />

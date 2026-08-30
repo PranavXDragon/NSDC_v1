@@ -2,7 +2,7 @@
   "name": "nsdc",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://usar.nsdc.org",
+  "homepage": "http://localhost:3000",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

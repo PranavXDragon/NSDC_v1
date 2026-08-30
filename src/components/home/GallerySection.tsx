@@ -126,7 +126,7 @@ export default function MarqueeColumnSection() {
 
     const col2Images = [
         "/home/7.webp",
-        "/home/EDC-poster.webp",
+        "/home/group_photo.jpg",
         "/home/2.webp",
     ];
 

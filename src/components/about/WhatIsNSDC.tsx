@@ -141,10 +141,10 @@ export default function WhatIsNSDC() {
               <div className="absolute bottom-0 right-0 w-6 h-6 border-r-2 border-b-2 border-nsdc-blue/40" />
 
               {/* Logo */}
-              <div className="relative w-full aspect-square max-w-[280px] mx-auto">
+              <div className="relative w-full aspect-[3/1] max-w-[280px] mx-auto">
                 <Image
-                  src="/about/Association_for_Computing_Machinery_(NSDC)_logo.webp"
-                  alt="NSDC Logo"
+                  src="/about/northeast-big-data-hub.jpg"
+                  alt="Northeast Big Data Innovation Hub"
                   fill
                   sizes="(max-width: 768px) 100vw, 280px"
                   className="object-contain"

@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     "Blockchain",
     "NSDC",
     "NSDC",
-    "EDC",
     "Coding Competition",
   ],
   openGraph: {

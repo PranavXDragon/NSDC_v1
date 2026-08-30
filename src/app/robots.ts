@@ -10,6 +10,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'https://usar.nsdc.org/sitemap.xml',
+        sitemap: 'http://localhost:3000/sitemap.xml',
     };
 }

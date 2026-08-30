@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import ClientLayout from "@/components/ClientLayout";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://usar.nsdc.org"),
+  metadataBase: new URL("http://localhost:3000"),
   title: {
     template: "%s | NSDC Student Chapter",
     default: "NSDC Student Chapter",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://usar.nsdc.org",
+    url: "http://localhost:3000",
     siteName: "NSDC Student Chapter",
     title: "NSDC Student Chapter",
     description:
@@ -65,7 +65,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
       <head>
         <link
           rel="preload"

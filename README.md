@@ -14,7 +14,7 @@
 [![Three.js](https://img.shields.io/badge/Three.js-black?style=for-the-badge&logo=three.js)](https://threejs.org/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.0-F107A3?style=for-the-badge&logo=framer)](https://www.framer.com/motion/)
 
-**Live Platform:** [usar.nsdc.org](https://usar.nsdc.org)
+
 </div>
 
 ---
