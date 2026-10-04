@@ -202,40 +202,6 @@ export default function EventPageContent({ event }: EventPageContentProps) {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                     </div>
 
-                    {/* Numbered Thumbnails */}
-                    {!hasPreview && slideshowImages.length > 1 && (
-                      <div className="flex flex-col gap-2 w-16 max-h-[450px] overflow-y-auto no-scrollbar">
-                        {slideshowImages.map((img, idx) => (
-                          <motion.button
-                            key={idx}
-                            onClick={() => setActiveSlide(idx)}
-                            className={`relative aspect-square rounded-lg overflow-hidden border-2 transition-all ${activeSlide === idx
-                              ? "border-nsdc-blue shadow-lg shadow-nsdc-blue/30"
-                              : "border-white/20 hover:border-white/40"
-                              }`}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                          >
-                            <Image
-                              src={img}
-                              alt={`Thumbnail ${idx + 1}`}
-                              fill
-                              sizes="100px"
-                              className="object-cover"
-                            />
-                            <div className={`absolute inset-0 flex items-center justify-center ${activeSlide === idx ? "bg-nsdc-blue/40" : "bg-black/50"
-                              }`}>
-                              <span
-                                className="text-[var(--foreground)] font-bold text-lg"
-                                style={{ fontFamily: "var(--font-heading)" }}
-                              >
-                                {idx + 1}
-                              </span>
-                            </div>
-                          </motion.button>
-                        ))}
-                      </div>
-                    )}
                   </div>
                   {/* Decorative elements */}
                   <div className="absolute -top-4 -right-4 w-8 h-8 border-t border-r border-nsdc-blue/30" />
