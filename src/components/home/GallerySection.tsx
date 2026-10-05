@@ -120,26 +120,26 @@ const ImageCard = ({ src }: { src: string }) => (
 export default function MarqueeColumnSection() {
     const col1Images = [
         "/events/inugration.jpg",
-        "/team/group_photo.jpg",
-        "/home/1.webp",
+        "/events/buildx/1.jpeg",
+        "/events/buildx/2.jpeg",
     ];
 
     const col2Images = [
-        "/home/7.webp",
-        "/home/group_photo.jpg",
-        "/home/2.webp",
+        "/events/buildx/3.jpeg",
+        "/events/buildx/4.jpeg",
+        "/events/buildx/5.jpeg",
     ];
 
     const col3Images = [
         "/events/installation.jpg",
-        "/home/5.webp",
-        "/home/technical_award.jpg",
+        "/events/buildx/6.jpeg",
+        "/events/buildx/7.jpeg",
     ];
 
     const col4Images = [
-        "/home/viceleader_award.jpg",
-        "/home/6.webp",
-        "/home/presedent_award.jpg",
+        "/events/buildx/8.jpeg",
+        "/events/buildx/9.jpeg",
+        "/events/buildx/10.jpeg",
     ];
 
     return (

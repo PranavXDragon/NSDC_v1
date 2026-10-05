@@ -23,16 +23,17 @@ interface UpcomingEvent {
 // Upcoming Events
 const upcomingEvents: UpcomingEvent[] = [
   {
-    title: "Inaugural Chapter Ceremony",
-    description: "Our inaugural ceremony was a massive success! Thank you to everyone who participated and made our launch a memorable event.",
-    tags: ["Ceremony", "Community", "Launch"],
-    registrationLink: "", // Empty link triggers the "Coming Soon" UI
-    image: "/events/inugration.jpg",
+    title: "BUILD-X",
+    description: "A real-world problem-solving challenge where teams designed and built functional full-stack solutions. A massive success with top talent from various colleges!",
+    tags: ["Hackathon", "Build-X", "Technical Event"],
+    registrationLink: "", // Empty link triggers the "Event Concluded" UI
+    image: "/events/buildx/1.jpeg",
+    slug: "build-x",
     stats: [
       { label: "Status", value: "Completed" },
-      { label: "Date", value: "Aug 2026" },
+      { label: "Date", value: "Sep 2026" },
       { label: "Format", value: "In-Person" },
-      { label: "Track", value: "General" }
+      { label: "Track", value: "Full-Stack" }
     ]
   }
 ];

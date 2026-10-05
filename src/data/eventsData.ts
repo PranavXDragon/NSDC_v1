@@ -81,42 +81,7 @@ export const eventsData: EventData[] = [
     image: "/events/installation.jpg",
     isUpcoming: false
   },
-  {
-    id: "first-community-meetup",
-    slug: "first-community-meetup",
-    title: "FIRST COMMUNITY MEETUP",
-    subtitle: "Our first gathering of students interested in Data Science, AI, and technology.",
-    emoji: "🤝",
-    date: "2026-08-15",
-    year: "2026",
-    category: "Community",
-    categoryColor: "#22c55e",
-    description: "Our first gathering of students interested in Data Science, AI, and technology.",
-    fullDescription: "Our first gathering of students interested in Data Science, AI, and technology.",
-    venue: "Suryodaya College of Engineering & Technology",
-    highlights: [],
-    tags: ["Meetup", "Networking", "AI"],
-    image: "/events/coming-soon.avif",
-    isUpcoming: false
-  },
-  {
-    id: "first-workshop",
-    slug: "first-workshop",
-    title: "FIRST WORKSHOP",
-    subtitle: "Coming Soon",
-    emoji: "💻",
-    date: "TBA",
-    year: "2026",
-    category: "Workshop",
-    categoryColor: "#f59e0b",
-    description: "Coming Soon",
-    fullDescription: "Coming Soon",
-    venue: "TBA",
-    highlights: [],
-    tags: ["Workshop", "Learning", "Coming Soon"],
-    image: "/events/coming-soon.avif",
-    isUpcoming: false
-  },
+
   {
     id: "build-x",
     slug: "build-x",
@@ -161,24 +126,7 @@ export const eventsData: EventData[] = [
     organizers: ["ACES", "NSDC"],
     participants: "Team Size: 2-4"
   },
-  {
-    id: "technical-session",
-    slug: "technical-session",
-    title: "TECHNICAL SESSION",
-    subtitle: "Coming Soon",
-    emoji: "⚡",
-    date: "TBA",
-    year: "2026",
-    category: "Tech Talk",
-    categoryColor: "#8b5cf6",
-    description: "Coming Soon",
-    fullDescription: "Coming Soon",
-    venue: "TBA",
-    highlights: [],
-    tags: ["Tech Talk", "Session", "Coming Soon"],
-    image: "/events/coming-soon.avif",
-    isUpcoming: false
-  }
+
 ];
 
 export function getEventBySlug(slug: string): EventData | undefined {
